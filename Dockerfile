@@ -2,7 +2,7 @@ FROM node:14
 
 WORKDIR /app
 
-ARG DEFAULT_PORT=80
+
 
 COPY package.json /app
 
@@ -13,7 +13,7 @@ COPY . /app/
 #RUN npm install
 VOLUME [ "/app/node_modules" ]
 
-ENV PORT $DEFAULT_PORT
+ENV PORT=80
 
 EXPOSE $PORT
 
